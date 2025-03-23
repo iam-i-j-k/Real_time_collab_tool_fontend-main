@@ -14,7 +14,20 @@ export default function Dashboard() {
       setIsLoading(true);
       try {
         await new Promise(resolve => setTimeout(resolve, 1000));
+
+        /*
+        const user = JSON.parse(localStorage.getItem('user') || '{}');
+        const token = user.token;
+        const { data } = await axios.get('http://localhost:5000/api/documents', {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
+        setDocuments(data);
+        */
         
+        // Mock data for demonstration
+
         setDocuments([
           { _id: '1', title: 'Project Proposal', createdAt: '2023-05-15T10:30:00Z', category: 'Business', lastEdited: '2 days ago' },
           { _id: '2', title: 'Meeting Notes', createdAt: '2023-05-10T14:20:00Z', category: 'Notes', lastEdited: '1 week ago' },
